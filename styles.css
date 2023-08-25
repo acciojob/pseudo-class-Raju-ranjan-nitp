@@ -1,1 +1,22 @@
-/*  your css code here. If applicable */
+#container {
+    margin: 20px;
+    position: relative; /* Required for pseudo-elements */
+}
+
+#container::before,
+#container::after {
+    content: "Special Text";
+    color: #f00;
+    font-size: 20px;
+    position: absolute;
+}
+
+#container::before {
+    left: -80px; /* Adjust as needed */
+    top: 0;
+}
+
+#container::after {
+    right: -80px; /* Adjust as needed */
+    bottom: 0;
+}
